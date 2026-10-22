@@ -1,6 +1,8 @@
 # 💸 LendFlow FinOps Framework
 ### Cloud-Native Infrastructure Cost Optimisation & FinOps Governance Platform
 
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-lendflow--finops.vercel.app-00DC82?style=for-the-badge&logo=vercel&logoColor=white)](https://lendflow-finops-framework-tau.vercel.app/)
+
 [![CI/CD Pipeline](https://github.com/myselflove/lendflow-finops-framework/actions/workflows/ci.yml/badge.svg)](https://github.com/myselflove/lendflow-finops-framework/actions/workflows/ci.yml)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![React](https://img.shields.io/badge/React-18.3-61DAFB.svg?logo=react&logoColor=black)](https://reactjs.org)
@@ -9,6 +11,9 @@
 [![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.14-3776AB.svg?logo=python&logoColor=white)](https://python.org)
 [![Tests Passing](https://img.shields.io/badge/Tests-117%20Passed-brightgreen.svg)](tests/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+> 🌐 **Live Interactive Website:** **[https://lendflow-finops-framework-tau.vercel.app/](https://lendflow-finops-framework-tau.vercel.app/)**  
+> *Click to open the production dashboard with full interactive waterfall charts, scenario simulation, and on-call alerting.*
 
 ---
 
@@ -87,7 +92,14 @@
 
 ## 💻 Step-by-Step Setup Guide
 
-### 🚀 Method 1: 1-Click Docker (Easiest)
+### 🌐 Method 0: Live Cloud Website (Instant Access - No Setup Needed)
+
+👉 **Open Live Dashboard:** **[https://lendflow-finops-framework-tau.vercel.app/](https://lendflow-finops-framework-tau.vercel.app/)**  
+*Hosted 24/7 on Vercel Edge with zero local configuration required.*
+
+---
+
+### 🚀 Method 1: 1-Command Docker (Local Full-Stack)
 
 Run both the FastAPI backend and React frontend with one command:
 
