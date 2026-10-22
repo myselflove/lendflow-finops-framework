@@ -1,0 +1,81 @@
+date,service,anomaly_type,severity,expected_cost_usd,actual_cost_usd,delta_pct,root_cause,auto_resolved,ticket_id,region
+2024-07-01,lendflow-credit-scoring,SPIKE,CRITICAL,545.29,2190.62,301.7,Missing S3 lifecycle policy,False,LF-FINOPS-2000,ap-south-1
+2024-07-05,lendflow-underwriting,SUSTAINED_INCREASE,HIGH,2881.81,5289.96,83.6,Autoscaling ceiling too high,False,LF-FINOPS-2001,ap-south-1
+2024-07-08,lendflow-auth,ORPHANED_RESOURCE,MEDIUM,4970.57,5859.49,17.9,Idle ALB with no registered targets,False,LF-FINOPS-2002,ap-south-1
+2024-07-09,lendflow-credit-scoring,IDLE_WASTE,MEDIUM,3790.44,4337.57,14.4,Dev environment running all weekend,False,LF-FINOPS-2003,ap-south-1
+2024-07-10,lendflow-auth,SUSTAINED_INCREASE,HIGH,1319.9,2197.51,66.5,Autoscaling ceiling too high,False,LF-FINOPS-2004,ap-south-1
+2024-07-13,lendflow-auth,IDLE_WASTE,MEDIUM,3252.21,2910.21,-10.5,Dev environment running all weekend,True,LF-FINOPS-2005,ap-south-1
+2024-07-16,lendflow-notifications,IDLE_WASTE,MEDIUM,3649.04,4313.63,18.2,Dev environment running all weekend,False,LF-FINOPS-2006,ap-south-1
+2024-07-19,lendflow-audit,IDLE_WASTE,MEDIUM,3031.65,3152.19,4.0,RDS snapshot left from deleted cluster,False,LF-FINOPS-2007,ap-south-1
+2024-07-20,lendflow-credit-scoring,SUSTAINED_INCREASE,MEDIUM,2229.97,3110.15,39.5,"Staging env cloned from prod, never scaled down",False,LF-FINOPS-2008,ap-south-1
+2024-07-21,lendflow-payments,SPIKE,CRITICAL,1991.88,7695.38,286.3,NAT Gateway data transfer spike,False,LF-FINOPS-2009,ap-south-1
+2024-07-26,lendflow-audit,SPIKE,CRITICAL,1657.49,4610.77,178.2,Missing S3 lifecycle policy,True,LF-FINOPS-2010,ap-south-1
+2024-07-28,lendflow-auth,SPIKE,CRITICAL,2564.78,6057.71,136.2,Unscheduled load test in dev,False,LF-FINOPS-2011,ap-south-1
+2024-07-30,lendflow-gateway,SUSTAINED_INCREASE,MEDIUM,3083.61,4482.63,45.4,"Staging env cloned from prod, never scaled down",False,LF-FINOPS-2012,ap-south-1
+2024-07-31,lendflow-underwriting,ORPHANED_RESOURCE,MEDIUM,3293.56,3496.29,6.2,S3 bucket not cleaned after pipeline deletion,True,LF-FINOPS-2013,ap-south-1
+2024-08-02,lendflow-gateway,IDLE_WASTE,MEDIUM,2980.75,2825.04,-5.2,RDS snapshot left from deleted cluster,True,LF-FINOPS-2014,ap-south-1
+2024-08-03,lendflow-audit,SUSTAINED_INCREASE,HIGH,3629.84,6357.61,75.1,New feature deployment without rightsizing review,False,LF-FINOPS-2015,ap-south-1
+2024-08-10,lendflow-ingestion,SPIKE,CRITICAL,644.62,1344.39,108.6,Runaway Lambda recursion,False,LF-FINOPS-2016,ap-south-1
+2024-08-14,lendflow-ledger,IDLE_WASTE,MEDIUM,4521.42,4517.01,-0.1,Dev environment running all weekend,False,LF-FINOPS-2017,ap-south-1
+2024-08-15,lendflow-credit-scoring,SUSTAINED_INCREASE,HIGH,1146.71,2202.98,92.1,Autoscaling ceiling too high,False,LF-FINOPS-2018,ap-south-1
+2024-08-16,lendflow-underwriting,SUSTAINED_INCREASE,HIGH,3054.02,5751.77,88.3,New feature deployment without rightsizing review,False,LF-FINOPS-2019,ap-south-1
+2024-08-20,lendflow-notifications,IDLE_WASTE,MEDIUM,4193.2,3910.15,-6.8,RDS snapshot left from deleted cluster,False,LF-FINOPS-2020,ap-south-1
+2024-08-26,lendflow-ledger,SUSTAINED_INCREASE,HIGH,1255.02,2485.56,98.0,New feature deployment without rightsizing review,False,LF-FINOPS-2021,ap-south-1
+2024-08-27,lendflow-ledger,ORPHANED_RESOURCE,MEDIUM,3569.99,3269.11,-8.4,Idle ALB with no registered targets,False,LF-FINOPS-2022,ap-south-1
+2024-08-30,lendflow-audit,SUSTAINED_INCREASE,MEDIUM,4716.94,6752.06,43.1,Autoscaling ceiling too high,False,LF-FINOPS-2023,ap-south-1
+2024-08-31,lendflow-audit,SPIKE,CRITICAL,2046.88,7054.61,244.7,NAT Gateway data transfer spike,False,LF-FINOPS-2024,ap-south-1
+2024-09-01,lendflow-collections,SPIKE,CRITICAL,1082.55,4275.78,295.0,Runaway Lambda recursion,False,LF-FINOPS-2025,ap-south-1
+2024-09-06,lendflow-underwriting,SPIKE,CRITICAL,3764.11,16415.08,336.1,Unscheduled load test in dev,False,LF-FINOPS-2026,ap-south-1
+2024-09-08,lendflow-credit-scoring,ORPHANED_RESOURCE,MEDIUM,2716.04,2423.88,-10.8,Elastic IP not associated after instance stop,False,LF-FINOPS-2027,ap-south-1
+2024-09-12,lendflow-credit-scoring,IDLE_WASTE,MEDIUM,859.93,768.26,-10.7,EBS volumes unattached after EC2 termination,False,LF-FINOPS-2028,ap-south-1
+2024-09-13,lendflow-auth,ORPHANED_RESOURCE,MEDIUM,4349.55,4696.05,8.0,S3 bucket not cleaned after pipeline deletion,False,LF-FINOPS-2029,ap-south-1
+2024-09-15,lendflow-analytics,ORPHANED_RESOURCE,MEDIUM,1515.16,1345.74,-11.2,Idle ALB with no registered targets,False,LF-FINOPS-2030,ap-south-1
+2024-09-16,lendflow-audit,SPIKE,CRITICAL,3264.15,8279.27,153.6,NAT Gateway data transfer spike,True,LF-FINOPS-2031,ap-south-1
+2024-09-19,lendflow-collections,SPIKE,CRITICAL,1761.06,3834.81,117.8,NAT Gateway data transfer spike,True,LF-FINOPS-2032,ap-south-1
+2024-09-22,lendflow-analytics,SPIKE,CRITICAL,1534.16,6060.82,295.1,Missing S3 lifecycle policy,False,LF-FINOPS-2033,ap-south-1
+2024-09-23,lendflow-analytics,SUSTAINED_INCREASE,HIGH,1147.72,2138.04,86.3,New feature deployment without rightsizing review,True,LF-FINOPS-2034,ap-south-1
+2024-09-25,lendflow-analytics,SUSTAINED_INCREASE,HIGH,4107.88,7216.88,75.7,"Staging env cloned from prod, never scaled down",False,LF-FINOPS-2035,ap-south-1
+2024-09-26,lendflow-auth,SUSTAINED_INCREASE,HIGH,1292.42,2217.74,71.6,New feature deployment without rightsizing review,False,LF-FINOPS-2036,ap-south-1
+2024-09-27,lendflow-collections,SUSTAINED_INCREASE,MEDIUM,3740.74,5236.91,40.0,Autoscaling ceiling too high,True,LF-FINOPS-2037,ap-south-1
+2024-10-02,lendflow-auth,ORPHANED_RESOURCE,MEDIUM,1648.53,1705.17,3.4,Idle ALB with no registered targets,True,LF-FINOPS-2038,ap-south-1
+2024-10-03,lendflow-auth,ORPHANED_RESOURCE,MEDIUM,1359.69,1254.53,-7.7,S3 bucket not cleaned after pipeline deletion,False,LF-FINOPS-2039,ap-south-1
+2024-10-07,lendflow-ingestion,IDLE_WASTE,MEDIUM,4420.44,4211.01,-4.7,RDS snapshot left from deleted cluster,False,LF-FINOPS-2040,ap-south-1
+2024-10-08,lendflow-payments,SUSTAINED_INCREASE,MEDIUM,3137.44,4307.98,37.3,"Staging env cloned from prod, never scaled down",False,LF-FINOPS-2041,ap-south-1
+2024-10-12,lendflow-underwriting,ORPHANED_RESOURCE,MEDIUM,3983.78,3885.79,-2.5,S3 bucket not cleaned after pipeline deletion,False,LF-FINOPS-2042,ap-south-1
+2024-10-13,lendflow-ledger,SUSTAINED_INCREASE,HIGH,1606.64,3180.09,97.9,Autoscaling ceiling too high,False,LF-FINOPS-2043,ap-south-1
+2024-10-15,lendflow-ledger,ORPHANED_RESOURCE,MEDIUM,574.31,639.82,11.4,Idle ALB with no registered targets,False,LF-FINOPS-2044,ap-south-1
+2024-10-16,lendflow-underwriting,SPIKE,CRITICAL,4800.23,15638.93,225.8,Unscheduled load test in dev,False,LF-FINOPS-2045,ap-south-1
+2024-10-17,lendflow-audit,ORPHANED_RESOURCE,MEDIUM,3681.49,4370.37,18.7,Elastic IP not associated after instance stop,True,LF-FINOPS-2046,ap-south-1
+2024-10-19,lendflow-doc-verify,SUSTAINED_INCREASE,HIGH,2678.27,4430.51,65.4,New feature deployment without rightsizing review,False,LF-FINOPS-2047,ap-south-1
+2024-10-20,lendflow-notifications,SPIKE,CRITICAL,617.88,1516.69,145.5,Unscheduled load test in dev,True,LF-FINOPS-2048,ap-south-1
+2024-10-21,lendflow-ingestion,SUSTAINED_INCREASE,HIGH,2616.0,4976.86,90.2,Autoscaling ceiling too high,True,LF-FINOPS-2049,ap-south-1
+2024-10-22,lendflow-credit-scoring,ORPHANED_RESOURCE,MEDIUM,1117.01,1184.05,6.0,S3 bucket not cleaned after pipeline deletion,False,LF-FINOPS-2050,ap-south-1
+2024-10-25,lendflow-payments,ORPHANED_RESOURCE,MEDIUM,2646.2,2991.49,13.0,S3 bucket not cleaned after pipeline deletion,False,LF-FINOPS-2051,ap-south-1
+2024-10-27,lendflow-auth,ORPHANED_RESOURCE,MEDIUM,4164.92,4554.26,9.3,Elastic IP not associated after instance stop,False,LF-FINOPS-2052,ap-south-1
+2024-10-28,lendflow-doc-verify,SPIKE,CRITICAL,4950.84,16724.21,237.8,Missing S3 lifecycle policy,False,LF-FINOPS-2053,ap-south-1
+2024-10-29,lendflow-ledger,SPIKE,CRITICAL,4106.05,15271.83,271.9,Runaway Lambda recursion,False,LF-FINOPS-2054,ap-south-1
+2024-10-31,lendflow-ledger,IDLE_WASTE,MEDIUM,2814.07,3197.75,13.6,EBS volumes unattached after EC2 termination,True,LF-FINOPS-2055,ap-south-1
+2024-11-01,lendflow-payments,SUSTAINED_INCREASE,HIGH,1199.64,2237.07,86.5,Autoscaling ceiling too high,False,LF-FINOPS-2056,ap-south-1
+2024-11-02,lendflow-payments,SPIKE,CRITICAL,1075.75,3726.9,246.4,Runaway Lambda recursion,True,LF-FINOPS-2057,ap-south-1
+2024-11-04,lendflow-doc-verify,ORPHANED_RESOURCE,MEDIUM,3407.97,3258.31,-4.4,S3 bucket not cleaned after pipeline deletion,False,LF-FINOPS-2058,ap-south-1
+2024-11-07,lendflow-doc-verify,ORPHANED_RESOURCE,MEDIUM,1274.06,1513.87,18.8,Idle ALB with no registered targets,False,LF-FINOPS-2059,ap-south-1
+2024-11-08,lendflow-notifications,ORPHANED_RESOURCE,MEDIUM,2887.51,2945.9,2.0,Elastic IP not associated after instance stop,True,LF-FINOPS-2060,ap-south-1
+2024-11-09,lendflow-payments,IDLE_WASTE,MEDIUM,1936.9,2182.88,12.7,Dev environment running all weekend,False,LF-FINOPS-2061,ap-south-1
+2024-11-12,lendflow-underwriting,SUSTAINED_INCREASE,HIGH,4496.05,6794.75,51.1,Autoscaling ceiling too high,False,LF-FINOPS-2062,ap-south-1
+2024-11-13,lendflow-doc-verify,SUSTAINED_INCREASE,HIGH,2810.79,5447.93,93.8,Autoscaling ceiling too high,True,LF-FINOPS-2063,ap-south-1
+2024-11-15,lendflow-underwriting,SUSTAINED_INCREASE,HIGH,3235.87,5370.13,66.0,Autoscaling ceiling too high,False,LF-FINOPS-2064,ap-south-1
+2024-11-16,lendflow-auth,ORPHANED_RESOURCE,MEDIUM,2186.9,2566.33,17.4,Elastic IP not associated after instance stop,False,LF-FINOPS-2065,ap-south-1
+2024-11-17,lendflow-auth,IDLE_WASTE,MEDIUM,4740.21,4701.21,-0.8,Dev environment running all weekend,False,LF-FINOPS-2066,ap-south-1
+2024-11-20,lendflow-audit,SPIKE,CRITICAL,3510.16,8641.57,146.2,Runaway Lambda recursion,False,LF-FINOPS-2067,ap-south-1
+2024-11-27,lendflow-doc-verify,ORPHANED_RESOURCE,MEDIUM,2475.38,2300.69,-7.1,Elastic IP not associated after instance stop,False,LF-FINOPS-2068,ap-south-1
+2024-11-30,lendflow-payments,SPIKE,CRITICAL,3205.98,13345.44,316.3,Missing S3 lifecycle policy,False,LF-FINOPS-2069,ap-south-1
+2024-12-01,lendflow-underwriting,IDLE_WASTE,MEDIUM,3033.24,3595.95,18.6,RDS snapshot left from deleted cluster,False,LF-FINOPS-2070,ap-south-1
+2024-12-02,lendflow-payments,SUSTAINED_INCREASE,MEDIUM,3059.79,4448.36,45.4,"Staging env cloned from prod, never scaled down",False,LF-FINOPS-2071,ap-south-1
+2024-12-03,lendflow-payments,SPIKE,CRITICAL,1006.23,3478.26,245.7,Runaway Lambda recursion,False,LF-FINOPS-2072,ap-south-1
+2024-12-05,lendflow-notifications,ORPHANED_RESOURCE,MEDIUM,929.02,830.98,-10.6,Elastic IP not associated after instance stop,False,LF-FINOPS-2073,ap-south-1
+2024-12-09,lendflow-auth,SUSTAINED_INCREASE,HIGH,4729.72,9380.42,98.3,New feature deployment without rightsizing review,False,LF-FINOPS-2074,ap-south-1
+2024-12-15,lendflow-auth,ORPHANED_RESOURCE,MEDIUM,553.51,599.12,8.2,S3 bucket not cleaned after pipeline deletion,False,LF-FINOPS-2075,ap-south-1
+2024-12-16,lendflow-auth,SPIKE,CRITICAL,4227.37,11490.63,171.8,NAT Gateway data transfer spike,False,LF-FINOPS-2076,ap-south-1
+2024-12-20,lendflow-ingestion,SPIKE,CRITICAL,2556.18,5148.02,101.4,Runaway Lambda recursion,False,LF-FINOPS-2077,ap-south-1
+2024-12-24,lendflow-audit,ORPHANED_RESOURCE,MEDIUM,3343.13,3630.42,8.6,Idle ALB with no registered targets,False,LF-FINOPS-2078,ap-south-1
+2024-12-26,lendflow-gateway,IDLE_WASTE,MEDIUM,1978.92,1760.77,-11.0,Dev environment running all weekend,False,LF-FINOPS-2079,ap-south-1
