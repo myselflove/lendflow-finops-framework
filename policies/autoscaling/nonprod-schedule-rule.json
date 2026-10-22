@@ -1,0 +1,13 @@
+{
+  "RuleName": "lendflow-nonprod-nightly-shutdown",
+  "Description": "Triggers Lambda function to stop dev and staging EC2/EKS instances at 20:00 IST Monday-Friday and all weekend.",
+  "ScheduleExpression": "cron(30 14 ? * MON-FRI *)",
+  "State": "ENABLED",
+  "Targets": [
+    {
+      "Id": "StopNonProdWorkloadsLambda",
+      "Arn": "arn:aws:lambda:ap-south-1:123456789012:function:lendflow-finops-nonprod-scheduler",
+      "Input": "{\"action\":\"STOP\",\"environments\":[\"staging\",\"development\"],\"exclude_tags\":{\"EmergencyOverride\":\"true\"}}"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "RestrictOperationsToApprovedLendFlowRegions",
+      "Effect": "Deny",
+      "NotAction": [
+        "iam:*",
+        "organizations:*",
+        "route53:*",
+        "cloudfront:*",
+        "waf:*",
+        "shield:*",
+        "support:*",
+        "cost-optimization-hub:*",
+        "ce:*",
+        "budgets:*"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringNotEquals": {
+          "aws:RequestedRegion": [
+            "ap-south-1",
+            "eu-west-1",
+            "eu-central-1"
+          ]
+        },
+        "ArnNotLike": {
+          "aws:PrincipalARN": [
+            "arn:aws:iam::*:role/LendFlow-BreakGlass-Admin"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: lendflow-payments-hpa
+  namespace: lendflow-pci-enclave
+  labels:
+    app.kubernetes.io/name: lendflow-payments
+    compliance.lendflow.io/scope: pci-dss-v4
+    compliance.lendflow.io/min-az: "3"
+    finops.lendflow.io/service: lendflow-payments
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: lendflow-payments
+  # Compliance Lock: PCI DSS requires minimum 3 replicas across 3 AZs
+  minReplicas: 3
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 65
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 600
+      policies:
+      - type: Pods
+        value: 1
+        periodSeconds: 120
+    scaleUp:
+      stabilizationWindowSeconds: 0
+      policies:
+      - type: Percent
+        value: 100
+        periodSeconds: 15

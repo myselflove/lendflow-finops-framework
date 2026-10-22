@@ -1,0 +1,28 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DenyUnapprovedGPUInstanceCreation",
+      "Effect": "Deny",
+      "Action": "ec2:RunInstances",
+      "Resource": "arn:aws:ec2:*:*:instance/*",
+      "Condition": {
+        "StringLike": {
+          "ec2:InstanceType": [
+            "p3.*",
+            "p4.*",
+            "p5.*",
+            "g4dn.*",
+            "g5.*",
+            "g6.*",
+            "trn1.*",
+            "inf2.*"
+          ]
+        },
+        "StringNotEquals": {
+          "aws:RequestTag/FinOpsGpuException": "APPROVED"
+        }
+      }
+    }
+  ]
+}

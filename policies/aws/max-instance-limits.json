@@ -1,0 +1,41 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DenyOversizedEC2InstancesWithoutFinOpsReview",
+      "Effect": "Deny",
+      "Action": "ec2:RunInstances",
+      "Resource": "arn:aws:ec2:*:*:instance/*",
+      "Condition": {
+        "StringLike": {
+          "ec2:InstanceType": [
+            "*.16xlarge",
+            "*.24xlarge",
+            "*.32xlarge",
+            "*.metal"
+          ]
+        },
+        "StringNotEquals": {
+          "aws:RequestTag/OversizeApprovedBy": "CFO"
+        }
+      }
+    },
+    {
+      "Sid": "EnforceEBSVolumeMaxSizeInNonProd",
+      "Effect": "Deny",
+      "Action": "ec2:CreateVolume",
+      "Resource": "arn:aws:ec2:*:*:volume/*",
+      "Condition": {
+        "NumericGreaterThan": {
+          "ec2:VolumeSize": "1000"
+        },
+        "StringEquals": {
+          "aws:RequestTag/Environment": [
+            "staging",
+            "development"
+          ]
+        }
+      }
+    }
+  ]
+}

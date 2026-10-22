@@ -1,0 +1,63 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "EnforceMandatoryFinOpsTagsOnEC2AndEBS",
+      "Effect": "Deny",
+      "Action": [
+        "ec2:RunInstances",
+        "ec2:CreateVolume"
+      ],
+      "Resource": [
+        "arn:aws:ec2:*:*:instance/*",
+        "arn:aws:ec2:*:*:volume/*"
+      ],
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/CostCenter": "true",
+          "aws:RequestTag/Environment": "true",
+          "aws:RequestTag/Service": "true",
+          "aws:RequestTag/Owner": "true",
+          "aws:RequestTag/ComplianceScope": "true"
+        }
+      }
+    },
+    {
+      "Sid": "EnforceMandatoryFinOpsTagsOnRDS",
+      "Effect": "Deny",
+      "Action": [
+        "rds:CreateDBInstance",
+        "rds:CreateDBCluster"
+      ],
+      "Resource": [
+        "arn:aws:rds:*:*:db:*",
+        "arn:aws:rds:*:*:cluster:*"
+      ],
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/CostCenter": "true",
+          "aws:RequestTag/Environment": "true",
+          "aws:RequestTag/Service": "true",
+          "aws:RequestTag/Owner": "true",
+          "aws:RequestTag/ComplianceScope": "true"
+        }
+      }
+    },
+    {
+      "Sid": "EnforceMandatoryFinOpsTagsOnS3",
+      "Effect": "Deny",
+      "Action": [
+        "s3:CreateBucket"
+      ],
+      "Resource": "arn:aws:s3:::*",
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/CostCenter": "true",
+          "aws:RequestTag/Environment": "true",
+          "aws:RequestTag/Service": "true",
+          "aws:RequestTag/Owner": "true"
+        }
+      }
+    }
+  ]
+}
