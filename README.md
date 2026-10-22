@@ -1,7 +1,7 @@
 # LendFlow FinOps Framework
 ### Cloud-Native Infrastructure Cost Optimisation & FinOps Governance Platform
 
-[![CI/CD Pipeline](https://github.com/placeholder/lendflow-finops-framework/actions/workflows/ci.yml/badge.svg)](.github/workflows/ci.yml)
+[![CI/CD Pipeline](https://github.com/myselflove/lendflow-finops-framework/actions/workflows/ci.yml/badge.svg)](https://github.com/myselflove/lendflow-finops-framework/actions/workflows/ci.yml)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![React](https://img.shields.io/badge/React-18.3-61DAFB.svg?logo=react&logoColor=black)](https://reactjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
