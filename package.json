@@ -1,0 +1,9 @@
+{
+  "name": "lendflow-finops-framework",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd app/frontend && npm install && npm run build",
+    "dev": "cd app/frontend && npm run dev"
+  }
+}

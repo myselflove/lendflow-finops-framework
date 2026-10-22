@@ -39,7 +39,7 @@ if (-not (Test-Path $VenvPython)) {
 
 Write-Host "  Installing backend requirements..." -ForegroundColor Gray
 & $VenvPython -m pip install --upgrade pip
-& $VenvPython -m pip install -r (Join-Path $RootDir "requirements.txt")
+& $VenvPython -m pip install -r (Join-Path $RootDir "app\backend\requirements.txt")
 Write-Host "  [OK] Python dependencies installed." -ForegroundColor Green
 
 # 3. Check Node and npm, install frontend packages
