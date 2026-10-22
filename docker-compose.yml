@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: app/backend/Dockerfile
+    container_name: lendflow-finops-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=production
+      - APP_HOST=0.0.0.0
+      - APP_PORT=8000
+      - AWS_REGION=ap-south-1
+      - BASELINE_MONTHLY_SPEND=180000
+      - TARGET_MONTHLY_SPEND=120000
+    volumes:
+      - ./data:/workspace/data:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    build:
+      context: ./app/frontend
+      dockerfile: Dockerfile
+    container_name: lendflow-finops-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+networks:
+  default:
+    name: lendflow-network
